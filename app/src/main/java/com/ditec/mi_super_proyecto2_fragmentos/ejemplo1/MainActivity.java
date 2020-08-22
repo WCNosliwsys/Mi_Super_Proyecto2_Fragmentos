@@ -1,12 +1,17 @@
-package com.ditec.mi_super_proyecto2_fragmentos;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.ditec.mi_super_proyecto2_fragmentos.ejemplo1;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.ditec.mi_super_proyecto2_fragmentos.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(MainActivity.this,(String)mispinner.getSelectedItem() , Toast.LENGTH_SHORT).show();
+                Fragment FragmentoSeleccionado = null;
+                switch (i){
+                    case 0:
+                        FragmentoSeleccionado= new ListaFragmento();
+                        break;
+                    case 1:
+                        FragmentoSeleccionado= new GridFragmento();
+                }
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.fragmento,FragmentoSeleccionado);
+                transaction.commit();
             }
 
             @Override

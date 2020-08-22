@@ -1,4 +1,4 @@
-package com.ditec.mi_super_proyecto2_fragmentos;
+package com.ditec.mi_super_proyecto2_fragmentos.ejemplo1;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class GridFragmento  extends Fragment {
+import com.ditec.mi_super_proyecto2_fragmentos.R;
+
+public class GridFragmento extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
