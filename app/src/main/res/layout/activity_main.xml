@@ -13,6 +13,6 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.ditec.mi_super_proyecto2_fragmentos.ListaFragmento"
-        android:id="@+id/mifragment"/>
+        android:id="@+id/mifragment"
+        android:name="com.ditec.mi_super_proyecto2_fragmentos.GridFragmento"/>
 </LinearLayout>
