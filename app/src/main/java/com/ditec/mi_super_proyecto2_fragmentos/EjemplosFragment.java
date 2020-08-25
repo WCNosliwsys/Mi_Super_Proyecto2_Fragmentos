@@ -37,4 +37,7 @@ public class EjemplosFragment extends AppCompatActivity {
     }
 
 
+    public void ejemplo3(View view) {
+        startActivity(new Intent(this, MainFragmentCorreo.class));
+    }
 }
